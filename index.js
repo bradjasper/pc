@@ -70,7 +70,7 @@ const ask = {
       let _path = process.cwd()
       inquirer.prompt([
         { type: 'input', name: 'DOMAIN', message: 'Human Friendly API Domain for this Server (Ex: https://bitdb.network)', default: (process.env.DOMAIN ? process.env.DOMAIN : "http://" + ip.address() + ":3000" ) },
-        { type: 'input', name: 'PLANARIUM_PORT', message: 'Planarium container port to expoose', default: (process.env.PLANARIUM_PORT ? process.env.PLANARIUM_PORT : 3000) },
+        { type: 'input', name: 'PLANARIUM_PORT', message: 'Planarium container port to expose', default: (process.env.PLANARIUM_PORT ? process.env.PLANARIUM_PORT : 3000) },
         { type: 'confirm', name: 'JOIN', message: 'Join the Planaria Network? (Otherwise private)', default: true }
       ]).then(function(answers) {
         cb(answers)
